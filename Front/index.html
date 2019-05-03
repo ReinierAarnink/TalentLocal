@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Visual Recognition</title>
+</head>
+
+<body>
+
+  <!--   IMAGE UPLOAD-->
+  <p>Choose an image from disk or create one with a camera, by clicking the 'Choose File'-button:</p>
+  <form action="/upload/photo" enctype="multipart/form-data" method="POST">
+    <input type="file" name="myImage" accept="image/*"  id="file"  onchange="loadFile(event)" />
+    <img id="output" width="200" />
+    <input type="submit" value="Upload Image" />
+  </form>
+
+  <script>
+    var loadFile = function (event) {
+      var image = document.getElementById('output');
+      image.src = URL.createObjectURL(event.target.files[0]);
+    };
+
+    function ValidateSize(file) {
+      var FileSize = file.files[0].size / 1024 / 1024;
+      if (FileSize > 10) {
+        alert("File size exceeds 10 MB, don't upload!");
+      } else { }
+    };
+
+  </script>
+
+</body>
+
+</html>

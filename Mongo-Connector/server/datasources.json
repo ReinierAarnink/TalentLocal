@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "ImageRec": {
+    "host": "j4fzj.azure.mongodb.net",
+    "port": 21017,
+    "url": "mongodb+srv://admin:admin@imagerec-j4fzj.azure.mongodb.net/test?retryWrites=true",
+    "database": "ImageRec",
+    "password": "admin",
+    "name": "ImageRec",
+    "user": "admin",
+    "connector": "mongodb"
+  }
+}

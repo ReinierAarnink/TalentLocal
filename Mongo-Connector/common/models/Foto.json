@@ -1,0 +1,19 @@
+{
+  "name": "Image",
+  "base": "PersistedModel",
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "class": {
+      "type": "string",
+      "required": true
+    },
+    "score": {
+      "type": "number",
+      "minimum": 0,
+      "exclusiveMaximum": 1,
+      "required": true
+    }
+  }
+}
